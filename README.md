@@ -1,2 +1,24 @@
-# PhiuSFBv0NkHjLd3
-Potential Talents
+# Potential Talents Overview
+
+
+
+
+## About the Dataset
+
+
+
+
+
+### Objectives
+
+
+
+
+## Exploratory Data Analysis
+
+
+## Modeling
+
+
+
+## Conclusion
