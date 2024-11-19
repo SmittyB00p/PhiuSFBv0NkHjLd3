@@ -5,8 +5,7 @@
 
 ## About the Dataset
 
-![Alt text](../word-cloud.jpeg)
-
+![Word Cloud for visual purposes](PhiuSFBv0NkHjLd3/word-cloud.jpeg)
 
 
 ### Objectives
