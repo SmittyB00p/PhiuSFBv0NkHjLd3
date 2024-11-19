@@ -5,7 +5,7 @@
 
 ## About the Dataset
 
-![Word Cloud for visual purposes](/Users/smittyboop/Desktop/Potential Talents Project/PhiuSFBv0NkHjLd3/word-cloud.jpeg)
+![Word Cloud for visual purposes](https://github.com/SmittyB00p/PhiuSFBv0NkHjLd3/blob/af81b4cb19cc44a705e55f19e703cebe82ff1b2a/word-cloud.jpeg)
 
 
 ### Objectives
