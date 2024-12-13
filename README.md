@@ -19,7 +19,25 @@ Certain stop words have been omitted from the feature, such as numbers, articles
 
 
 ## Exploratory Data Analysis
+The eda.ipynb is comprised of two main sections:
+* an exploratory look at the main three feature in the dataset - (job_title, connection, and location)
+* techniques to use for representing the job titles via pre-trained word/sentence embeddings
 
+Looking at the dataset in the first section of the notebook there are: 
+* 52 unique job_titles in the dataset
+* 41 different locations (because of the way that people have specified their location, there might be less uniqueness)
+* over 40% of the candidates who have more than 500 connections
+
+When looking at how to represent job titles via vector embeddings in the second section there were multiple techniques used:
+* Tf-IDF (Term Frequency - Inverse Document Frequency)
+* Word2Vec
+* FastText
+* GloVe
+* BERT
+
+In the end, BERT's embeddings seemed to be the best way to capture most of the similarity/disimilarity of the job titles. 
+
+- If you want, at the bottom of the eda.ipynb there is a heatmap of both the BERT and FastText cosine similarity scores that shows the difference in their representations.
 
 ## Modeling
 
