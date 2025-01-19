@@ -1,15 +1,17 @@
 # Potential Talents Overview
 
+## youtube video ##
+
 As a talent sourcing and management company, the goal is to identify and match talented individuals to technology companies. However, this task is challenging due to several factors:
 
-1.) Understanding the Role: Accurately grasping the client’s needs and the requirements of the role.
-2.) Identifying Candidate Qualities: Knowing what makes a candidate a good fit for the specific role.
-3.) Locating Talent: Finding skilled individuals in the right places.
+* Understanding the Role: Accurately grasping the client’s needs and the requirements of the role.
+* Identifying Candidate Qualities: Knowing what makes a candidate a good fit for the specific role.
+* Locating Talent: Finding skilled individuals in the right places.
 
 Currently, this process involves significant manual effort. Such as determining how fit a candidate is to a given role after a pre-ranking has been done and then re-ranking that list. The aim is to streamline the process by developing an automated system that saves time and improves candidate matching. Specifically, to build a machine learning-powered pipeline that:
 
-1.) Identifies and ranks candidates based on their suitability for a given role.
-2.) Utilizes role-specific keywords (e.g., "full-stack software engineer", "aspiring human resources", etc.) to guide the search process.
+* Identifies and ranks candidates based on their suitability for a given role.
+* Utilizes role-specific keywords (e.g., "full-stack software engineer", "aspiring human resources", etc.) to guide the search process.
 
 ### Objectives
 
@@ -52,26 +54,28 @@ After looking at unique words in the job_title feature and doing feature enginee
 
 ## Modeling
 
-The models.ipynb notebook is comprised of three main sections. The first two implementing different learning-to-rank algorithms. 
+The models.ipynb notebook is comprised of three main sections. The first two implementing different learning-to-rank algorithms. The last section dealves into prompt engineering. 
 * RankNet (using PyTorch)
 * LambdaRank (using LGBM and XGBoost)
 * Prompt Engineering (using Phi3)
 
--- Note --
-The two notebooks below require extra memory and a GPU. I was not able to run either of them more than once.
+---------------------------------------------- Note --------------------------------------------
+The two notebooks below require a GPU or TPU and at least 25GB of working memory. I was not able to run the RAG.ipynb and thankfully i was able to run the other notebook for long enough to question the SLM on why it ranked certain candidates the way it did.
 
 The RAG.ipynb notebook is used for implementing Retrieval-Augmented Generation via the small language model (SLM) Phi-3.
 
-The Google Colab notebook is used for fine-tuning the Phi-3 model. Because of hardware issues (memory and GPU) it was the optimal way to fine-tune.
+The Google Colab notebook (fine_tuning_Phi3.ipynb) is used for fine-tuning the Phi-3 model. Because of hardware issues (memory and GPU) it was the optimal way to fine-tune.
 
 ## Conclusion
 
-In conclusion, the best way to implement a robust ranking algorithm is with the XGBRanker model
+After experimenting with many different techniques I found that the best way to implement a robust ranking algorithm is with the XGBRanker model. My reason for this model being that the accuracy score was relatively high (over 70% in some cases) for the ranking task. 
+
+Although the prompting of pre-trained LLM's to complete the same task was much more efficient, in that in consisted of much less code being written, the latency was far too great for someone who is just looking for a handful of candidates for a specific job title. That is not to discount the game-changing fact that being able to fine-tune a pre-trained LLM with proprietary data has immense upside in a company today. All I am saying is that prompting and the RAG implemetation will be using too many resources for this type of task. 
 
 ## Setup
 
-Make sure to use Python --version 3.9.13. 
+Make sure to use Python ```--version 3.9.13.``` 
 
-Then make sure to read in the requirements.txt file by running pip install -r 'requirements.txt' in the terminal
+Then make sure to read in the requirements.txt file by running ```pip install -r 'requirements.txt'``` in the terminal
 OR
-if using the notebook setup you can run %pip install -r 'requirements.txt'
+if using a notebook setup you can run ```%pip install -r 'requirements.txt'```
