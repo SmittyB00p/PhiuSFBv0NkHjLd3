@@ -1,6 +1,6 @@
 # Potential Talents Overview
 
-## youtube video ##
+[![Walkthrough of project](https://img.youtube.com/vi/PfCW3qclEH0/0.jpg)](https://www.youtube.com/watch?v=PfCW3qclEH0)
 
 As a talent sourcing and management company, the goal is to identify and match talented individuals to technology companies. However, this task is challenging due to several factors:
 
